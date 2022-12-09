@@ -38,8 +38,8 @@ const App = () => {
 
   // get the anecdote with most votes
   const getMostVotedAnecdote = (points) => {
-    let maxVote = -Infinity
-    let maxIndex = 0
+    let maxVote = points[mostVotedAnecdote]
+    let maxIndex = mostVotedAnecdote
     
     for (let i = 0; i < points.length; i++) {
 
@@ -61,6 +61,7 @@ const App = () => {
       <Button onClick={handleNextAnecdoteClick} text="next anecdote"></Button>
       <h3>Anecdote with most votes</h3>
       <p>{anecdotes[mostVotedAnecdote]}</p>
+      <p>has {points[mostVotedAnecdote]} votes</p>
     </div>
   )
 }
